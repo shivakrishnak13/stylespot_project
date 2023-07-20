@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import styles from "../CSS/homepage.module.css"
-import pcbanner from "../images/pc banner.png";
-import kids from "../images/kids.png";
-import mens from "../images/mens cat.png";
-import womnes from "../images/womens cat.png";
-import latest from "../images/latest cat.png";
-import jacket from "../images/jacket cat.png";
-import formal from "../images/formal cat.png";
-import workwear from "../images/formal cat.png";
-import jeans from "../images/jeans cat.png";
-import casual from "../images/casual wear.png";
-import sesonal from "../images/seasonal cat.png";
-import sports from "../images/sportswear cat.png";
-import logo from "../images/only logo h.png"
-import lastposter from "../images/lastposter.png"
-import mobilelastposter from "../images/mobile lastposter.png"
-import mobilebanner from "../images/Mobile banner.png"
+import pcbanner from "../assets/images/pc banner.png";
+import kids from "../assets/images/kids.png";
+import mens from "../assets/images/mens cat.png";
+import womnes from "../assets/images/womens cat.png";
+import latest from "../assets/images/latest cat.png";
+import jacket from "../assets/images/jacket cat.png";
+import formal from "../assets/images/formal cat.png";
+import workwear from "../assets/images/formal cat.png";
+import jeans from "../assets/images/jeans cat.png";
+import casual from "../assets/images/casual wear.png";
+import sesonal from "../assets/images/seasonal cat.png";
+import sports from "../assets/images/sportswear cat.png";
+import logo from "../assets/images/only logo h.png"
+import lastposter from "../assets/images/lastposter.png"
+import mobilelastposter from "../assets/images/mobile lastposter.png"
+import mobilebanner from "../assets/images/Mobile banner.png"
 import Navbar from '../components/Navbar';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FaPlay } from "react-icons/fa"

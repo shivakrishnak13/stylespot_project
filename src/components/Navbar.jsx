@@ -5,7 +5,7 @@ import { FiSearch, FiUsers, FiLogOut } from "react-icons/fi";
 import { GrClose } from "react-icons/gr";
 import { SlMenu } from "react-icons/sl";
 import styles from "../CSS/navbar.module.css";
-import logo from "../images/StyleSpot editted.png";
+import logo from "../assets/images/StyleSpot editted.png";
 
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../Redux/AuthReducer/action";

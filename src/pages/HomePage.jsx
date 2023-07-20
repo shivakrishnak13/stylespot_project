@@ -16,7 +16,7 @@ import logo from "../images/only logo h.png"
 import lastposter from "../images/lastposter.png"
 import mobilelastposter from "../images/mobile lastposter.png"
 import mobilebanner from "../images/Mobile banner.png"
-import Navbar from '../Components/Navbar';
+import Navbar from '../components/Navbar';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FaPlay } from "react-icons/fa"
 // Import Swiper styles
@@ -27,7 +27,7 @@ import { FreeMode } from "swiper";
 
 import "../index.css";
 
-import Footer from '../Components/Footer';
+import Footer from '../components/Footer';
 import axios from 'axios';
 import { Skeleton, SkeletonText,Menu,MenuButton,MenuList,MenuItem } from '@chakra-ui/react';
   import { useNavigate } from 'react-router-dom';

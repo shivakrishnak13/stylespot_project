@@ -8,7 +8,7 @@ import styles from "../CSS/navbar.module.css";
 import logo from "../assets/images/StyleSpot editted.png";
 
 import { useDispatch, useSelector } from "react-redux";
-import { logout } from "../Redux/AuthReducer/action";
+// import { logout } from "../Redux/AuthReducer/action";
 
 import { MenuButton,MenuList,MenuItem,Menu,IconButton } from '@chakra-ui/react';
 import {BiHomeHeart} from "react-icons/bi";
@@ -21,13 +21,13 @@ const Navbar = () => {
   const navigate=useNavigate()
   const [act, setect] = useState(false);
 
-  const cartp = useSelector((store)=> store.Addtocart_reducer.Products);
+  // const cartp = useSelector((store)=> store.Addtocart_reducer.Products);
 
   const [carttotal,setcart]= useState(0)
 
-useEffect(()=>{
-setcart(cartp.length)
-},[cartp])
+// useEffect(()=>{
+// setcart(cartp.length)
+// },[cartp])
 
  
   const showOptions = () => {

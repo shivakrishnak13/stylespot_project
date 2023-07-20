@@ -41,7 +41,7 @@ const HomePage = () => {
 
   let Skel= new Array(16).fill(0);
 
-  const navugate = useNavigate()
+  const navugate = useNavigate();
 
   function getData() {
     setloading(true)
@@ -51,7 +51,7 @@ const HomePage = () => {
     }).catch((err) => {
       console.log(err)
     })
-  }
+  };
 
 
   useEffect(() => {

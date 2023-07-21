@@ -1,20 +1,22 @@
-// export function login(payload) {
-//     return { type: 'LOGIN',payload };
-//   }
-
 import axios from "axios";
-import { LOGIN_FAILURE, LOGIN_REQUEST, SIGNUP_SUCCESS } from "./actionType"
+import { LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCSESS, SIGNUP_SUCCESS } from "./actionType"
 
-  
-//  export function logout() {
-//     return { type: 'LOGOUT' };
-//   }
+let URL = "http://localhost:3000";
+
+
+
+
+export const loginUser = (email) => (dispatch) => {
+     dispatch({type:LOGIN_REQUEST});
+ return axios.get(`${URL}/users/${email}`);
+}
+
   
 
 export const createAccount = (payload) => (dispatch) =>{
         dispatch({type:LOGIN_REQUEST});
       
-   return axios.post("",payload).then((res)=>{
+   return axios.post(`${URL}/users`,payload).then((res)=>{
       console.log("account created",res.data);
       dispatch({type:SIGNUP_SUCCESS});
     }).catch((err)=>{

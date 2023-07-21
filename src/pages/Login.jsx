@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { useForm } from "react-hook-form";
 import { RiErrorWarningFill } from "react-icons/ri";
@@ -14,16 +14,15 @@ import {
 import { useToast } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { createAccount, login } from "../Redux/AuthReducer/action";
+import { createAccount, loginUser } from "../Redux/AuthReducer/action";
 import {
   Modal,
   ModalOverlay,
   ModalContent,
-  ModalHeader,
-  ModalFooter,
   ModalBody,
   ModalCloseButton,
 } from "@chakra-ui/react";
+import { LOGIN_FAILURE, LOGIN_SUCSESS } from "../Redux/AuthReducer/actionType";
 export default function Login() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -39,63 +38,69 @@ export default function Login() {
     formState: { errors: errors1 },
   } = useForm();
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [email, setemail] = useState();
-  const [password, setpassword] = useState();
-  let Handlelogin = (e) => {
+  
+
+
+  let adminLogin = (e) => {
     e.preventDefault();
     navigate("/admin");
     onClose();
   };
-  const url = `https://dapper-precious-sedum.glitch.me/profile`;
+
+
+
   const onLoginSubmit = (dat) => {
     const email = dat.Email;
     const password = dat.Password;
-    fetch(`${url}/${email}`)
-      .then((res) => res.json())
-      .then((data) => {
-        if (Object.keys(data).length === 0) {
+    dispatch(loginUser(email)).then((res)=>{
+      let data= res.data;
+      
+        if (data.password !== password) {
           toast({
-            title: "Account Not Found",
-            description: "Create a new account",
+            title: "Password do not match",
             position: "top-center",
             status: "error",
             duration: 2000,
             isClosable: true,
           });
         } else {
-          if (data.password !== password) {
-            toast({
-              title: "Password do not match",
-              position: "top-center",
-              status: "error",
-              duration: 2000,
-              isClosable: true,
-            });
-          } else {
-            toast({
-              title: "Sign In Successfully!",
-              position: "top-center",
-              status: "success",
-              duration: 2000,
-              isClosable: true,
-            });
-            dispatch(login(data));
-            navigate("/");
-            document.getElementById("loginform").reset();
-          }
+          toast({
+            title: "Sign In Successfully!",
+            position: "top-center",
+            status: "success",
+            duration: 2000,
+            isClosable: true,
+          });
+          navigate("/");
+          document.getElementById("loginform").reset();
         }
-      });
+      
+   
+     dispatch({type: LOGIN_SUCSESS})
+  }).catch((err)=>{
+    console.log("err",err);
+    toast({
+      title: "Account Not Found",
+      description: "Create a new account",
+      position: "top-center",
+      status: "error",
+      duration: 2000,
+      isClosable: true,
+    });
+      dispatch({type: LOGIN_FAILURE})
+  })
+        
+    
   };
 
-  
-  const onSubmit = (data) => {
+  const onAccountCreateSubmit = (data) => {
     let obj = {
       name: data.Name,
       id: data.Email,
       password: data.Password,
       cart: [],
     };
-    dispatch(createAccount(obj)).then(()=>{
+    dispatch(createAccount(obj)).then(() => {
       toast({
         title: "Account Created Successfully.",
         position: "top-center",
@@ -103,11 +108,18 @@ export default function Login() {
         duration: 2000,
         isClosable: true,
       });
-    })
-    
+    }).catch(()=>{
+      toast({
+        title: "Something went wrong!",
+        position: "top-center",
+        status: "error",
+        duration: 2000,
+        isClosable: true,
+      });
+    });
+
     document.getElementById("ca").reset();
   };
-
 
   return (
     <DIV>
@@ -126,6 +138,7 @@ export default function Login() {
                   required: true,
                   pattern: /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
                 })}
+                placeholder="email"
               />
               {errors1?.Email?.type === "required" && (
                 <p>
@@ -141,6 +154,7 @@ export default function Login() {
               <label>Enter your Password</label>
               <input
                 type="password"
+                placeholder="password"
                 autoComplete="off"
                 {...register1("Password", {
                   required: true,
@@ -181,7 +195,7 @@ export default function Login() {
             </form>
           </TabPanel>
           <TabPanel>
-            <form id="ca" onSubmit={handleSubmit(onSubmit)}>
+            <form id="ca" onSubmit={handleSubmit(onAccountCreateSubmit)}>
               <label>Enter your Name</label>
               <input
                 autoComplete="off"
@@ -306,8 +320,7 @@ export default function Login() {
                     border: "1px solid",
                     padding: "10px",
                     borderRadius: "10px",
-                    width:"100%"
-
+                    width: "100%",
                   }}
                   onChange={(e) => setemail(e.target.value)}
                 />
@@ -329,7 +342,7 @@ export default function Login() {
                     border: "1px solid",
                     padding: "10px",
                     borderRadius: "10px",
-                    width:"100%"
+                    width: "100%",
                   }}
                   onChange={(e) => setpassword(e.target.value)}
                 />
@@ -337,7 +350,7 @@ export default function Login() {
               <Button
                 background="black"
                 _hover={{ bg: "black" }}
-                onClick={Handlelogin}
+                onClick={adminLogin}
                 color="white"
               >
                 Log in

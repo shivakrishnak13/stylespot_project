@@ -1,5 +1,10 @@
 {
-    "users" : [
-        
-    ]
+  "users": [
+    {
+      "name": "shiva",
+      "id": "patelkshiva@gmail.com",
+      "password": "shivak",
+      "cart": []
+    }
+  ]
 }

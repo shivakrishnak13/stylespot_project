@@ -23,7 +23,10 @@ import {
   ModalCloseButton,
 } from "@chakra-ui/react";
 import { LOGIN_FAILURE, LOGIN_SUCSESS } from "../Redux/AuthReducer/actionType";
-export default function Login() {
+
+
+
+export default function LoginAndRegisterPage() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const toast = useToast();
@@ -38,7 +41,8 @@ export default function Login() {
     formState: { errors: errors1 },
   } = useForm();
   const { isOpen, onOpen, onClose } = useDisclosure();
-  
+  const [email, setemail] = useState();
+  const [password, setpassword] = useState();
 
 
   let adminLogin = (e) => {

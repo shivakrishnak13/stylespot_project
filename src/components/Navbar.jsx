@@ -62,7 +62,8 @@ const Navbar = () => {
           {loggedIn.loggedIn ? (
             <>
             <p>{loggedIn.payload.name}</p>
-            <FiLogOut onClick={() => dispatch(logout())}/></>
+            <FiLogOut onClick={() => console.log("hai")}/>
+            </>
           ) : (
             <FiUsers onClick={() => navigate("/login")} />
           )}

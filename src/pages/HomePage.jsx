@@ -23,8 +23,7 @@ import { FaPlay } from "react-icons/fa"
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import { FreeMode } from "swiper";
-
+import SwiperCore from "swiper";
 import "../index.css";
 
 import Footer from '../components/Footer';
@@ -60,7 +59,7 @@ const HomePage = () => {
 
   }, [])
 
-
+  SwiperCore.use([]);
 
 
   return (
@@ -239,7 +238,7 @@ const HomePage = () => {
 
             freeMode={true}
 
-            modules={[FreeMode]}
+            
             className={styles.swiper}
           >
            

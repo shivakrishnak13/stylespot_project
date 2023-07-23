@@ -2,12 +2,8 @@ import { Route, Routes } from "react-router-dom";
 import HomePage from "./HomePage";
 import LoginAndRegisterPage from "./LoginAndRegisterPage";
 import ProductPage from "./ProductPage";
-// import Product from "./Product";
-// import Admin from "./Admin";
-// import Cart from "./Cart";
-// import SingleProductPage from "./SingleProductPage";
-// import Payment from "./Payment";
-// import PrivateRoute from "./PrivateRoute";
+import Admin from "./Admin";
+
 
 const MainRoutes = () => {
   return (
@@ -27,7 +23,7 @@ const MainRoutes = () => {
         }
       /> */}
        <Route path="/login" element={<LoginAndRegisterPage />} />
-      {/* <Route path="/admin" element={<Admin />} /> */}
+      <Route path="/admin" element={<Admin />} />
       {/* <Route path="/payment" element={<Payment />} /> */}
       <Route path="/products" element={<ProductPage />} />
       {/* <Route path="/product/:id" element={<SingleProductPage />} />  */}

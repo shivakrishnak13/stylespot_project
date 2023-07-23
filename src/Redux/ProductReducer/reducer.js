@@ -1,32 +1,35 @@
+import { ERROR, GET_SUCCESS, REQUEST } from "./actionTypes"
 
 
 const initialState={
-    error:false,
-    loading:false,
-    allData:[],
+    iserror:false,
+    isloading:false,
+    data:[],
 }
 
 export const reducer=(state=initialState,action)=>{
 switch(action.type){
-    case 'REQUEST':{
+    case REQUEST:{
         return {
             ...state,
-            loading:true
+            isloading:true,
+            iserror:false
         }
     }
-    case 'ERROR':{
+    case ERROR:{
         return {
             ...state,
-            error:true
+            iserror:true,
+            isloading:false
         }
     }
-    case 'SUCCESS':{
+    case GET_SUCCESS:{
         return {
             ...state,
-            allData:action.payload,
-            loading:false
-        }
-        
+            data:action.payload,
+            loading:false,
+            iserror:false
+        }   
     }
     default : return state
 }

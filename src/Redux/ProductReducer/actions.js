@@ -1,6 +1,7 @@
 import axios from "axios";
-import { ERROR, REQUEST, SUCCESS } from "./reducerTypes"
+import { ADD_SUCCESS, ERROR, GET_SUCCESS, REQUEST } from "./actionTypes"
 
+let URL = "http://localhost:8080";
 
 export const getData=(page)=>(dispatch)=>{
 dispatch({type:REQUEST});
@@ -16,7 +17,7 @@ axios.get('https://dapper-precious-sedum.glitch.me/products').then((res)=>{
        }
  
     })
-    dispatch({type:SUCCESS,payload:dat});
+   
     console.log(res)
 }).catch((err)=>{
    dispatch({type:ERROR}); 
@@ -49,7 +50,7 @@ export const genderFilter=(by,page)=>(dispatch)=>{
            }
      
         })
-        dispatch({type:SUCCESS,payload:dat});
+     
     }else{
         let lim=6*page;
         let a=lim-6;
@@ -61,10 +62,14 @@ export const genderFilter=(by,page)=>(dispatch)=>{
            }
      
         })
-        dispatch({type:SUCCESS,payload:dat});
+       
     }
         console.log(res)
     }).catch((err)=>{
        dispatch({type:ERROR}); 
     })
 }
+
+
+
+

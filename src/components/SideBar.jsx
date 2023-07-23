@@ -101,6 +101,8 @@ const SideBar = () => {
 export default SideBar;
 
 const DIV = styled.div`
+ position: sticky;
+ 
   .gender {
     margin-top: 12px;
     

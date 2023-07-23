@@ -1,29 +1,17 @@
 import axios from "axios";
-import { ADD_SUCCESS, ERROR, GET_SUCCESS, REQUEST } from "./actionTypes"
+import {  ERROR, GET_SUCCESS, REQUEST } from "./actionTypes"
 
 let URL = "http://localhost:8080";
 
-export const getData=(page)=>(dispatch)=>{
-dispatch({type:REQUEST});
-
-axios.get('https://dapper-precious-sedum.glitch.me/products').then((res)=>{
-    let lim=6*page;
-    let a=lim-6;
-    let dat=res.data.filter((ele,i)=>{
-       if(i<lim&&i>=a){
-         return true; 
-       }else{
-          return false;
-       }
- 
-    })
-   
-    console.log(res)
-}).catch((err)=>{
-   dispatch({type:ERROR}); 
-})
-
-}
+export const getProduct = (dispatch) =>{
+   dispatch({type:REQUEST});
+   return axios.get(`${URL}/products`).then((res)=>{
+     console.log(res.data)
+      dispatch({type:GET_SUCCESS,payload:res.data})
+   }).catch((err)=>{
+    dispatch({type:ERROR})
+   })
+};
 
 export const genderFilter=(by,page)=>(dispatch)=>{
     dispatch({type:REQUEST});

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCSESS, SIGNUP_SUCCESS } from "./actionType"
 
-let URL = "http://localhost:3000";
+let URL = "https://natural-lead-thrush.glitch.me";
 
 
 

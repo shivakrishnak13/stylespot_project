@@ -1,7 +1,7 @@
 import axios from "axios";
 import {  ERROR, GET_SUCCESS, REQUEST, SINGLE_PROD } from "./actionTypes"
 
-let URL = "http://localhost:8080";
+let URL = "https://natural-lead-thrush.glitch.me";
 
 export const getProduct = (params) => (dispatch) =>{
    console.log(params)

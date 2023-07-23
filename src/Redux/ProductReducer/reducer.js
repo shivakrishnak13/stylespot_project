@@ -28,7 +28,7 @@ switch(action.type){
         return {
             ...state,
             data:action.payload,
-            loading:false,
+            isloading:false,
             iserror:false
         }   
     }
@@ -36,7 +36,7 @@ switch(action.type){
         return {
             ...state,
             singleproduct: action.payload,
-            loading:false,
+            isloading:false,
             iserror:false
         }
     default : return state

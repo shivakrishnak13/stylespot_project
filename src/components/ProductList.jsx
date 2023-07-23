@@ -4,10 +4,11 @@ import ProductCard from './ProductCard';
 import { styled } from 'styled-components';
 import { getProduct } from '../Redux/ProductReducer/actions';
 import { useLocation, useSearchParams } from 'react-router-dom';
+import SkeletonCard from './SkeletonCard';
 
 const ProductList = () => {
    
-  const {data} = useSelector((store) => store.productReducer);
+  const {data,isloading} = useSelector((store) => store.productReducer);
   const dispatch = useDispatch();
 
 
@@ -43,7 +44,10 @@ const ProductList = () => {
    
    return (
     <ProdList>
-         {
+         { isloading?
+         [...new Array(60)].map((el,i)=>{
+          return <SkeletonCard key={i} />
+         }) :
           data?.map((el)=>{
             return <ProductCard key={el.id} {...el} />
           })

@@ -21,7 +21,7 @@ const SideBar = ({clear,setDataClear}) => {
 
   const intialGender = SearchParam.get("gender");
   const intialCateory = SearchParam.getAll("category");
-  const intialColor = SearchParam.getAll("color")
+  const intialColor = SearchParam.getAll("colors")
   const [gender, setgender] = useState(intialGender|| "")
   const [category, setcategory] = useState(intialCateory || []);
   const [colors ,setcolors]= useState(intialColor||[])
@@ -63,8 +63,7 @@ const SideBar = ({clear,setDataClear}) => {
   useEffect(()=>{
     let params ={
       colors,
-      category,
-      
+      category, 
     }
     gender && (params.gender = gender);
     SetSearchParam(params)
@@ -113,37 +112,37 @@ const SideBar = ({clear,setDataClear}) => {
       <Heading mt={5} fontSize={16} >COLORS</Heading>
         <VStack display={"flex"} alignItems={"start"} pt={6}>
           <div className="color">
-            <Checkbox value="red" onChange={handleColors} defaultChecked={colors.includes("red")}/>
+            <Checkbox value="Red" onChange={handleColors} defaultChecked={colors.includes("Red")}/>
             <div className="round red"></div>
             <Text>Red</Text>
           </div>
           <div className="color">
-            <Checkbox value="blue" onChange={handleColors} defaultChecked={colors.includes("blue")}/>
+            <Checkbox value="Blue" onChange={handleColors} defaultChecked={colors.includes("Blue")}/>
             <div className="round blue"></div>
             <Text>Blue</Text>
           </div>
           <div className="color">
-            <Checkbox value="green" onChange={handleColors} defaultChecked={colors.includes("green")} />
+            <Checkbox value="Green" onChange={handleColors} defaultChecked={colors.includes("Green")} />
             <div className="round green"></div>
             <Text>Green</Text>
           </div>
           <div className="color">
-            <Checkbox value="black" onChange={handleColors} defaultChecked={colors.includes("black")}/>
+            <Checkbox value="Black" onChange={handleColors} defaultChecked={colors.includes("Black")}/>
             <div className="round black"></div>
             <Text>Black</Text>
           </div>
           <div className="color">
-            <Checkbox value="white" onChange={handleColors} defaultChecked={colors.includes("white")}/>
+            <Checkbox value="White" onChange={handleColors} defaultChecked={colors.includes("White")}/>
             <div className="round whte"></div>
             <Text>White</Text>
           </div>
           <div className="color">
-            <Checkbox value="yellow" onChange={handleColors} defaultChecked={colors.includes("yellow")}/>
+            <Checkbox value="Yellow" onChange={handleColors} defaultChecked={colors.includes("Yellow")}/>
             <div className="round yellow"></div>
             <Text>Yellow</Text>
           </div>
           <div className="color">
-            <Checkbox value="pink" onChange={handleColors} defaultChecked={colors.includes("pink")}/>
+            <Checkbox value="Pink" onChange={handleColors} defaultChecked={colors.includes("Pink")}/>
             <div className="round pink"></div>
             <Text>Pink</Text>
           </div>
@@ -153,12 +152,12 @@ const SideBar = ({clear,setDataClear}) => {
             <Text>Purple</Text>
           </div>
           <div className="color">
-            <Checkbox value="orange" onChange={handleColors} defaultChecked={colors.includes("orange")} />
+            <Checkbox value="Orange" onChange={handleColors} defaultChecked={colors.includes("Orange")} />
             <div className="round orange"></div>
             <Text>Orange</Text>
           </div>
           <div className="color">
-            <Checkbox value="brown" onChange={handleColors} defaultChecked={colors.includes("brown")} />
+            <Checkbox value="Brown" onChange={handleColors} defaultChecked={colors.includes("Brown")} />
             <div className="round brown"></div>
             <Text>Brown</Text>
           </div>

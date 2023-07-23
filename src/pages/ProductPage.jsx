@@ -18,7 +18,7 @@ export default function ProductPage() {
   }
   const [searchParams,setSearchParams] = useSearchParams();
   const sortorder = searchParams.get("order");
-  const color = searchParams.getAll("color");
+  const color = searchParams.getAll("colors");
   const gender = searchParams.get("gender");
   const category = searchParams.getAll("category");
   const [order,setorder] = useState("");

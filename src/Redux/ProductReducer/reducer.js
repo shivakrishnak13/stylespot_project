@@ -1,10 +1,11 @@
-import { ERROR, GET_SUCCESS, REQUEST } from "./actionTypes"
+import { ERROR, GET_SUCCESS, REQUEST, SINGLE_PROD } from "./actionTypes"
 
 
 const initialState={
     iserror:false,
     isloading:false,
     data:[],
+    singleproduct:{}
 }
 
 export const reducer=(state=initialState,action)=>{
@@ -31,6 +32,13 @@ switch(action.type){
             iserror:false
         }   
     }
+    case SINGLE_PROD:
+        return {
+            ...state,
+            singleproduct: action.payload,
+            loading:false,
+            iserror:false
+        }
     default : return state
 }
 }

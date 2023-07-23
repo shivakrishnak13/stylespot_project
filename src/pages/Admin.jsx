@@ -70,9 +70,7 @@ export default function Admin() {
   const dispatch = useDispatch()
   const [product, setProduct] = useState(initialState);
   const navigate = useNavigate();
-  const url = `https://dapper-precious-sedum.glitch.me/products`;
   const { isOpen, onOpen, onClose } = useDisclosure();
-  // const [data, setData] = useState([]);
   const [etitle, setetitle] = useState();
   const [eprice, seteprice] = useState();
   const [ebrand, setebrand] = useState();

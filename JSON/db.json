@@ -52,7 +52,7 @@
       "description": "This is Simple and comfortable Shirt",
       "brand": "Adidas",
       "color": "White",
-      "category": "Shirt checks",
+      "category": "Shirt",
       "gender": "Men",
       "size": "M"
     },
@@ -81,10 +81,10 @@
         "https://sslimages.shoppersstop.com/sys-master/images/h21/h83/17463215325214/A21INFUSE29_NAVY_alt4.jpg_2000Wx3000H"
       ],
       "price": 499,
-      "description": "This is a stylish printed shirt",
+      "description": "This is a S",
       "brand": "Adidas",
       "color": "Black",
-      "category": "printed shirt",
+      "category": "Shirt",
       "gender": "Men",
       "size": "XL"
     },
@@ -771,7 +771,7 @@
       "description": "Printed Polyester Mandarin Boys Dhoti Kurta Set",
       "brand": "Ramraj",
       "color": "Red",
-      "category": "Dhoti Kurta",
+      "category": "Dhoti",
       "gender": "Kids-Boys",
       "size": "L"
     },
@@ -787,7 +787,7 @@
       "description": "Printed Cotton Mandarin Boys Dhoti Kurta Set",
       "brand": "Ramraj",
       "color": "Maroon",
-      "category": "Dhoti Kurta",
+      "category": "Kurta",
       "gender": "Kids-Boys",
       "size": "XL"
     },
@@ -803,7 +803,7 @@
       "description": "Embroidered Cotton Mandarin Boys Dhoti Kurta Set",
       "brand": "Ramraj",
       "color": "Yellow",
-      "category": "Dhoti Kurta",
+      "category": "Kurta",
       "gender": "Kids-Boys",
       "size": "S"
     },
@@ -938,7 +938,7 @@
     {
       "title": "Solid Organic Cotton Regular Fit Men's T-Shirt",
       "gender": "men",
-      "category": "T-Shirts",
+      "category": "T-Shirt",
       "price": 999,
       "brand": "Tommy Hilfiger",
       "color": "pink",

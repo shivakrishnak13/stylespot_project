@@ -3,9 +3,12 @@ import {  ERROR, GET_SUCCESS, REQUEST } from "./actionTypes"
 
 let URL = "http://localhost:8080";
 
-export const getProduct = (dispatch) =>{
+export const getProduct = (params) => (dispatch) =>{
+   if(!params.params.gender){
+      delete params.params.gender;
+   }
    dispatch({type:REQUEST});
-   return axios.get(`${URL}/products`).then((res)=>{
+   return axios.get(`${URL}/products`,params).then((res)=>{
      console.log(res.data)
       dispatch({type:GET_SUCCESS,payload:res.data})
    }).catch((err)=>{

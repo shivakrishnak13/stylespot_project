@@ -98,7 +98,7 @@ export default function Admin() {
 
 
 
-  
+  //Delete Product
  
   const handleDeleteProduct = (id) => {
     dispatch(deleteProduct(id)).then((res)=>{
@@ -114,7 +114,7 @@ export default function Admin() {
     
   };
 
-
+// Edit Product
   const showdetails = (id) => {
         data.forEach((el)=>{
           if(el.id === id){

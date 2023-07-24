@@ -20,15 +20,14 @@ Akash Gupta
 
 💻 Tech Stack
 
-![Untitled design (1)](https://github.com/shivakrishnak13/sad-meat-6100/assets/119391118/6f39f9a2-9213-4695-afbf-de4efb354ea4)
-![Chackra Ui](https://github.com/shivakrishnak13/sad-meat-6100/assets/119391118/2b21d72b-a5f7-4cf1-8a82-fc021201da28)
-![Chackra Ui (2)](https://github.com/shivakrishnak13/sad-meat-6100/assets/119391118/d54de827-d54e-4371-acc2-bdc09807daa1)
-![Chackra Ui (1)](https://github.com/shivakrishnak13/sad-meat-6100/assets/119391118/7644b82b-2909-40ee-b998-41ba42fb97e7)
 
+![Untitled design (1)](https://github.com/shivakrishnak13/stylespot_project/assets/119391118/f45f51a3-13d8-4922-8ce4-f79f88074740)
 
+![Chackra Ui (2)](https://github.com/shivakrishnak13/stylespot_project/assets/119391118/ba7c22fb-a572-4e1c-bc2e-177ac783979f)
 
+![Chackra Ui](https://github.com/shivakrishnak13/stylespot_project/assets/119391118/f311cc78-d26f-41ff-90b5-74a54223dcbc)
 
-
+![Chackra Ui (1)](https://github.com/shivakrishnak13/stylespot_project/assets/119391118/c677ec12-0ce1-4e38-bd99-af70bad1e6e6)
 
 Tools
 

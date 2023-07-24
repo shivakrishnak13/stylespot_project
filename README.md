@@ -41,30 +41,36 @@ Tools
 
 Let's Dive into What we have made
 Home Page :
-![Screenshot (1025)](https://github.com/shivakrishnak13/sad-meat-6100/assets/119391118/6236472a-e968-401d-8e4a-f5a92d9612d0)
-![Screenshot (1030)](https://github.com/shivakrishnak13/sad-meat-6100/assets/119391118/5b449363-9358-4fd7-9626-9248eb5dcfa0)
+
+![Screenshot (1148)](https://github.com/shivakrishnak13/stylespot_project/assets/119391118/7f3f7c73-23fc-4a92-bce4-b90efe342e06)
+
+![Screenshot (1149)](https://github.com/shivakrishnak13/stylespot_project/assets/119391118/0c13caf7-4526-467d-aacf-21449ab7c042)
 
 
 
 Sign-Up Page :
-![Screenshot (1027)](https://github.com/shivakrishnak13/sad-meat-6100/assets/119391118/e487a4e0-f180-4b61-8af2-435963f4eb39)
 
+
+![Screenshot (1155)](https://github.com/shivakrishnak13/stylespot_project/assets/119391118/530a7b3e-4005-4268-b505-3ab3608478eb)
 
 
 
 Login Page :
-![Screenshot (1026)](https://github.com/shivakrishnak13/sad-meat-6100/assets/119391118/2ad86783-7f76-44b6-9099-ddf06f9605a9)
+
+![Screenshot (1154)](https://github.com/shivakrishnak13/stylespot_project/assets/119391118/3c347d03-db78-4d35-84f5-733a4d71145a)
 
 
 
 Product Page :
-![Screenshot (1031)](https://github.com/shivakrishnak13/sad-meat-6100/assets/119391118/8ad9a0e9-bdf6-4c0b-9ca0-8d13722d8a01)
+
+![Screenshot (1151)](https://github.com/shivakrishnak13/stylespot_project/assets/119391118/845c863b-55dc-4e9a-95ef-bb1b21a68b7e)
+
+![Screenshot (1152)](https://github.com/shivakrishnak13/stylespot_project/assets/119391118/da825f73-7f85-41e1-a59d-8d345bc51522)
+
 
 SingleProduct Page :
-![Screenshot (1034)](https://github.com/shivakrishnak13/sad-meat-6100/assets/119391118/faebaffe-8b8f-4a9d-8deb-56ff60e0a94e)
 
-
-
+![Screenshot (1153)](https://github.com/shivakrishnak13/stylespot_project/assets/119391118/24473774-56e2-45be-be35-069ffdce3ffc)
 
 
 
@@ -72,8 +78,9 @@ SingleProduct Page :
 
 
 Admin Dashboard Page :
-![Screenshot (1029)](https://github.com/shivakrishnak13/sad-meat-6100/assets/119391118/6402313c-2bf4-4245-80e4-9ef6c552c544)
 
+
+![Screenshot (1156)](https://github.com/shivakrishnak13/stylespot_project/assets/119391118/cb89039f-1c61-4305-a422-f180ca4ba7be)
 
 
 
@@ -81,15 +88,14 @@ Admin Dashboard Page :
 
 Admin Add Product Page :
 
-![Screenshot (1028)](https://github.com/shivakrishnak13/sad-meat-6100/assets/119391118/64814fa2-284c-41ad-8457-76663aa2339d)
 
 
-Responsiveness of the page: 
+![Screenshot (1157)](https://github.com/shivakrishnak13/stylespot_project/assets/119391118/5e2ac5ee-6054-430e-894c-c0da45cb6ac9)
 
 
 
-<img width=300px src="https://github.com/shivakrishnak13/sad-meat-6100/assets/119391118/8b19ed03-d146-4cb0-ad70-b3028ebad2a1" />
-<img width=300px src="https://github.com/shivakrishnak13/sad-meat-6100/assets/119391118/7611ecff-f528-4091-8f73-f2d76500fee6" />
+
+
 
 
 

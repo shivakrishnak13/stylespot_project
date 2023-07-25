@@ -23,7 +23,7 @@ const Navbar = () => {
 
   // const cartp = useSelector((store)=> store.Addtocart_reducer.Products);
 
-  const [carttotal,setcart]= useState(0)
+  
 
 // useEffect(()=>{
 // setcart(cartp.length)
@@ -34,7 +34,8 @@ const Navbar = () => {
     setect(!act);
   };
   const dispatch = useDispatch();
-  const loggedIn = useSelector((state) => state);
+  const {cart} = useSelector((state) => state.productReducer);
+  const {isAuth} = useSelector((state) => state.loginReducer);
   return (
     <div className={styles.wholenavbar}>
       <div className={styles.navbar_main}>
@@ -59,16 +60,16 @@ const Navbar = () => {
           <FiSearch />
 
 
-          {loggedIn.loggedIn ? (
+          {isAuth ? (
             <>
-            <p>{loggedIn.payload.name}</p>
+            <p>{isAuth}</p>
             <FiLogOut onClick={() => console.log("hai")}/>
             </>
           ) : (
             <FiUsers onClick={() => navigate("/login")} />
           )}
 
-    <span className={styles.cart} onClick={()=> navigate("/cart")}>Cart({carttotal})</span>
+    <span className={styles.cart} onClick={()=> navigate("/cart")}>Cart({cart.length})</span>
 
         </div>
 
@@ -98,7 +99,7 @@ const Navbar = () => {
               Collection
               </MenuItem>
               <MenuItem icon={<FaBlog/>} onClick={()=> navigate("/cart")} >
-              Cart
+              Cart({cart.length})
               </MenuItem>
               <MenuItem icon={<GiAmpleDress/>} >
               Fashion

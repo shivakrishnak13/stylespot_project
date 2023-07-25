@@ -55,7 +55,7 @@ function SingleProductPage() {
       });
     } else {
       // If the product is not in the cart, add it
-      const order = { ...singleproduct, quantity: 1 };
+      const order = { ...singleproduct, quantity: 1,totalprice: singleproduct.price };
       dispatch({ type: ADD_TO_CART, payload: order });
       toast({
         title: "Product Added to Cart",

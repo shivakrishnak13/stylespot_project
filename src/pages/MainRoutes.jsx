@@ -4,6 +4,7 @@ import LoginAndRegisterPage from "./LoginAndRegisterPage";
 import ProductPage from "./ProductPage";
 import Admin from "./Admin";
 import SingleProductPage from "./SingleProductPage";
+import Cart from "./CartPage";
 
 
 const MainRoutes = () => {
@@ -25,7 +26,7 @@ const MainRoutes = () => {
       /> */}
        <Route path="/login" element={<LoginAndRegisterPage />} />
       <Route path="/admin" element={<Admin />} />
-      {/* <Route path="/payment" element={<Payment />} /> */}
+      <Route path="/cart" element={<Cart />} />
       <Route path="/products" element={<ProductPage />} />
       <Route path="/product/:id" element={<SingleProductPage />} /> 
     </Routes>

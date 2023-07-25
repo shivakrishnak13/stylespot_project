@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo, useRef, useState } from "react";
 import style from "../CSS/singleProd.module.css";
 import { TfiHeart } from "react-icons/tfi";
 import Slider1 from "../components/Slider1";
@@ -8,37 +8,69 @@ import { useDispatch, useSelector } from "react-redux";
 import { Wrap, WrapItem, Button, useToast } from "@chakra-ui/react";
 import { styled } from "styled-components";
 import { singleProduct } from "../Redux/ProductReducer/actions";
+import { ADD_TO_CART } from "../Redux/ProductReducer/actionTypes";
 
 function SingleProductPage() {
 
    
   const toast = useToast();
   const dispatch = useDispatch();
-  const {singleproduct,loading} = useSelector((store)=> store.productReducer)
+  const {singleproduct,loading,cart} = useSelector((store)=> store.productReducer)
   const { id } = useParams();
   
   
   useEffect(() => {
    dispatch(singleProduct(id))
   }, []);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const currentImageIndexRef = useRef(0);
   const images = singleproduct?.images || [];
 
-  // Function to update the current image index every 5 seconds
+  // Function to update the current image index every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // 5000 milliseconds = 5 seconds
+      currentImageIndexRef.current = (currentImageIndexRef.current + 1) % images.length;
+    }, 3000); // 3000 milliseconds = 3 seconds
 
     // Clean up the interval on component unmount
     return () => clearInterval(interval);
   }, [images.length]);
 
-  // Get the URL of the current image
-  const currentImageUrl = images[currentImageIndex];
+  // Use useMemo to memoize the currentImageUrl
+  const currentImageUrl = useMemo(() => {
+    return images[currentImageIndexRef.current];
+  }, [images]);
+
+  // console.log(cart)
+
+  const addToCarthandle = () => {
+       
+    const isProductInCart = cart.some((item) => item.id === +id);
+      console.log(isProductInCart)
+    if (isProductInCart) {
+      toast({
+        title: "Product Already Added to Cart",
+        status: "info",
+        isClosable: true,
+      });
+    } else {
+      // If the product is not in the cart, add it
+      const order = { ...singleproduct, quantity: 1 };
+      dispatch({ type: ADD_TO_CART, payload: order });
+      toast({
+        title: "Product Added to Cart",
+        status: "success",
+        isClosable: true,
+      });
+    }
+
+      
+  }
+
+
   
 
-  console.log(id,"singleproduct",singleproduct);
+  // console.log(id,"singleproduct",singleproduct);
   return (
     <div>
       <div className={style.main}>
@@ -80,14 +112,7 @@ function SingleProductPage() {
             <Wrap>
               <WrapItem className={style.addtocart}>
                 <Button
-                  onClick={() => {
-                    // addtocart();
-                    toast({
-                      title: `Product Added`,
-                      status: "success",
-                      isClosable: true,
-                    });
-                  }}
+                  onClick={addToCarthandle}
                   _hover={{ bg: "black" }}
                 >
                   Add to Cart

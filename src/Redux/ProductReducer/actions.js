@@ -19,7 +19,7 @@ export const getProduct = (params) => (dispatch) =>{
 
 
 export const singleProduct = (id) => (dispatch) => {
-   console.log("single product", id);
+   // console.log("single product", id);
    dispatch({type:REQUEST});
    return axios.get(`${URL}/products/${id}`).then((res)=>{
       console.log(res.data)

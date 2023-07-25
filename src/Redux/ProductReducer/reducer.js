@@ -1,11 +1,12 @@
-import { ERROR, GET_SUCCESS, REQUEST, SINGLE_PROD } from "./actionTypes"
+import { ADD_TO_CART, ERROR, GET_SUCCESS, REQUEST, SINGLE_PROD } from "./actionTypes"
 
 
 const initialState={
     iserror:false,
     isloading:false,
     data:[],
-    singleproduct:{}
+    singleproduct:{},
+    cart:[]
 }
 
 export const reducer=(state=initialState,action)=>{
@@ -39,6 +40,14 @@ switch(action.type){
             isloading:false,
             iserror:false
         }
+    case ADD_TO_CART:
+        return {
+            ...state,
+            cart:[...state.cart,action.payload],
+            iserror:false,
+            isloading:false  
+        }
+    
     default : return state
 }
 }

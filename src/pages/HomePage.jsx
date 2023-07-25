@@ -44,7 +44,7 @@ const HomePage = () => {
 
   function getData() {
     setloading(true)
-    axios.get("https://dapper-precious-sedum.glitch.me/products?_limit=16").then((res) => {
+    axios.get("https://natural-lead-thrush.glitch.me/products?_limit=16").then((res) => {
       setloading(false)
       setProducts(res.data)
     }).catch((err) => {
@@ -262,8 +262,8 @@ const HomePage = () => {
               : Products?.map((product)=>{
                 return <SwiperSlide onClick={()=> navugate(`/product/${product.id}`)} className={styles.swiper_slide} key={product.id}>
                 <div className={styles.singleproduct}>
-                  <div> <img src={product.image} alt={product.title}/></div>
-  
+                  <div> { product.images[0] && <img src={product?.images[0]} alt={product.title}/> } </div>
+                  
                   <p>{product.title}</p>
                   <p>₹{product.price}</p>
                 </div>

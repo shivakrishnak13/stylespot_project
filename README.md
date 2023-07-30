@@ -7,11 +7,7 @@ Welcome to Stlespot
 StyleSpot is a trendy and vibrant e-commerce clothing store, offering a wide range of fashionable apparel for men, women, and children. With a keen eye for the latest fashion trends, StyleSpot curates a carefully selected collection of clothing, accessories, and footwear to cater to the diverse tastes and styles of its customers. From casual everyday wear to formal attire, shoppers can find the perfect ensemble to suit any occasion. With a user-friendly interface, convenient browsing options, and secure payment methods, StyleSpot ensures a seamless shopping experience. Whether you're looking for timeless classics or the hottest fashion statements, StyleSpot is the go-to destination for all your clothing needs.
 Deployed URL 👉 https://style-spot-dusky.vercel.app
 
-Our Team Members
 
-Shivakrishna Kosari
-
-Akash Gupta
 
 
 
@@ -89,26 +85,20 @@ Admin Add Product Page :
 ![Screenshot (1157)](https://github.com/shivakrishnak13/stylespot_project/assets/119391118/5e2ac5ee-6054-430e-894c-c0da45cb6ac9)
 
 
+Cart Page :
+
+
+![Screenshot (1172)](https://github.com/shivakrishnak13/stylespot_project/assets/119391118/57e00b65-4f33-45ca-bfdd-adb239a56cc1)
 
 
 
+![Screenshot (1173)](https://github.com/shivakrishnak13/stylespot_project/assets/119391118/29b2cf4b-63ef-43f0-aa05-3dd6b1751095)
 
 
 
-Our Learnings
-On this journey we faced many issues, but we keep motivated each other with patience.
+![Screenshot (1174)](https://github.com/shivakrishnak13/stylespot_project/assets/119391118/8f8c6de9-0105-437e-ab53-e90aaeaaa3c6)
 
-We all learned how to read and understand the code of other team members.
 
-We learned how to write more efficient and clean code.
-
-Even though We also learned how to plan a project and how to execute it step by step.
-
-By this Project we have learned how to collaborate and communicate with team effectively and improving the productivity.
-
-We also got a glimpse of using GitHub for the version control.
-
-Source Code(GitHub link):-
 
 Show your support
 Give a ⭐ if you like this project!
